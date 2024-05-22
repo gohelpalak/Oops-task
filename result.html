@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+
+        <script>
+
+            class result {
+
+                marks(Physics, Chemistry, Biology, Mathematics, Computer) {
+                    this.Physics = Physics;
+                    this.Chemistry = Chemistry;
+                    this.Biology = Biology;
+                    this.Mathematics = Mathematics;
+                    this.Computer = Computer;
+                    console.log(`physics marks = ${this.Physics}
+chemistry mark = ${this.Chemistry}
+biology marks = ${this.Biology}
+mathamatics marks = ${this.Mathematics}
+computer marks = ${this.Computer}`);
+                }
+                percentage() {
+                    this.avg = (this.Physics + this.Mathematics + this.Chemistry + this.Biology + this.Computer) / 5
+
+                    if (this.avg <= 100 && this.Physics <= 100 && this.Mathematics <= 100 && this.Chemistry <= 100 && this.Biology <= 100 && this.Computer <= 100) {
+                        console.log("percentage", this.avg);
+
+                        if (this.avg >= 90 && this.avg <= 100) {
+                            console.log("Grade - A");
+                        }
+                        else if (this.avg >= 80 && this.avg < 90) {
+                            console.log("Grade - B");
+                        }
+                        else if (this.avg >= 70 && this.avg < 80) {
+                            console.log("Grade - C");
+                        }
+                        else if (this.avg >= 60 && this.avg < 70) {
+                            console.log("Grade - D");
+                        }
+                        else if (this.avg >= 50 && this.avg < 60) {
+                            console.log("Grade - E");
+                        }
+                        else {
+                            console.log("Grade - F");
+                        }
+                    }
+                    else {
+                        console.log("enter valid marks(out of 100)");
+                    }
+                }
+            }
+
+            let r1 = new result
+            r1.marks(100, 60, 88, 86, 74)
+            r1.percentage()
+        </script>
+    </body>
+
+</html>

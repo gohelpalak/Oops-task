@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class employee {
+            constructor(name, salary, hire_date) {
+                this.name = name;
+                this.salary = salary;
+                this.hire_date = hire_date;
+            }
+
+            e_details(){
+                console.log(`Name = ${this.name}`);
+                console.log(`Salary = ${this.salary}`);
+                console.log(`Hire Date = ${this.hire_date.getFullYear()}`);
+            }
+            service() {
+                let hire_year = this.hire_date.getFullYear();
+                let current_year = new Date().getFullYear();
+                console.log(`yaer of service = ${current_year - hire_year}`); 
+            }
+        }
+
+        let e1 = new employee("xyz", 15000, new Date("2009-8-7"));
+        e1.e_details();
+        e1.service();
+
+
+
+    </script>
+
+</body>
+
+</html>

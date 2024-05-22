@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            class Restaurant {
+                constructor( item) {
+                    this.item = item;
+                }
+                menu() {
+                    this.item = [
+                        {
+                            name: "paneer angara",
+                            price: 100,
+                            rating: 4
+                        },
+                        {
+                            name: "veg schezwan fried rise",
+                            price: 120,
+                            rating: 3.5
+                        },
+                        {
+                            name: "paneer tikka masala",
+                            price: 140,
+                            rating: 3
+                        },
+                        {
+                            name: "paneer handi",
+                            price: 160,
+                            rating: 4.5
+                        },
+                        {
+                            name: "paneer kadai",
+                            price: 180,
+                            rating: 4
+                        },
+                        {
+                            name: "kaju masala",
+                            price: 100,
+                            rating: 4
+                        },
+                        {
+                            name: "paneer bhurji",
+                            price: 120,
+                            rating: 3.5
+                        },
+                        {
+                            name: "dal-khichdi",
+                            price: 140,
+                            rating: 3
+                        },
+                        {
+                            name: "paneer butter masala",
+                            price: 160,
+                            rating: 4.5
+                        },
+                        {
+                            name: "palak-paneer",
+                            price: 180,
+                            rating: 4
+                        }
+                    ]
+
+                    console.log("total items in manu are =", this.item.length);
+                    console.log(this.item);
+                    let sum = 0;
+                    for (let i = 0; i < this.item.length; i++) {
+                        sum = sum + this.item[i].rating
+                    }
+                    let avg = sum / this.item.length
+                    console.log("average rating of this manu =",avg);
+
+                }
+                addItem() {
+                    console.log("after add new items");
+                    this.item.push(
+                        {
+                            name: "manchurian dry",
+                            price: 200,
+                            rating: 4
+                        },
+                        {
+                            name: "veg manchurian fried rise",
+                            price: 200,
+                            rating: 4.5
+                        },
+                        {
+                            name: "manchow soup",
+                            price: 200,
+                            rating: 3
+                        }
+                    )
+                    console.log("total items in manu are =", this.item.length);
+                    console.log(this.item);
+                    let sum = 0;
+                    for (let i = 0; i < this.item.length; i++) {
+                        sum = sum + this.item[i].rating
+                    }
+                    let avg = sum / this.item.length
+                    console.log("average rating of this manu =",avg);
+                }
+
+                removeItem() {
+
+                    console.log("after removing items");
+                    this.item.pop()
+                    console.log("total items in manu are =", this.item.length);
+                    console.log(this.item);
+                    console.log(this.item.pop());
+
+                    let sum = 0;
+                    for (let i = 0; i < this.item.length; i++) {
+                        sum = sum + this.item[i].rating
+                    }
+                    let avg = sum / this.item.length
+                    console.log("average rating of this manu =",avg);
+                }
+
+            }
+
+
+
+
+
+            let m1 = new Restaurant
+            m1.menu()
+            m1.addItem()
+            m1.removeItem()
+        </script>
+
+    </body>
+
+</html>

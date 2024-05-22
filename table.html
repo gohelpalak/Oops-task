@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <table border="1" cellspacing="0" cellpadding = "10px" style="text-align: center;">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone</td>
+            </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+
+    </table>
+
+
+    <script>
+
+        let tbody = document.getElementById("tbody")
+
+        let arr = [
+            {
+                name: "ABC",
+                email: "abc@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "XYZ",
+                email: "xyz@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "MBK",
+                email: "mbk@gmail.com",
+                phone: "12345",
+            }
+        ]
+
+        arr.map((val, ind) => {
+
+            let tr = document.createElement("tr")
+            tr.innerHTML = `<td>${val.name}</td>
+                            <td>${val.email}</td>
+                            <td>${val.phone}</td>`
+
+            tbody.appendChild(tr)
+        })
+
+    </script>
+
+</body>
+
+</html>
